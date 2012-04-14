@@ -1,0 +1,8 @@
+<h3><%= resource.name %></h3>
+<% if resource.answers.any? %>
+  <ul>
+    <% resource.answers.each do |answer| %>
+      <li><%= answer.name %><%= ' *' if answer.is_right? %></li>    
+    <% end %>
+  </ul>
+<% end %>

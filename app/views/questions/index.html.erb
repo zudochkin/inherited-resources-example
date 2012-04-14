@@ -1,0 +1,8 @@
+Список вопросов:
+<% if collection.any? %>
+  <ul>
+    <%= render partial: 'question', collection: collection %>
+  </ul>
+<% else %>
+  <h3>Вопросов нет</h3>
+<% end %>

@@ -1,0 +1,8 @@
+<%= simple_form_for question, html: { class: 'form-inline' } do |f| %>
+  <%= f.input :name %>
+  <%= f.simple_fields_for :answers do |answer_form| %>
+    <%= answer_form.input :name %>
+    <%= answer_form.check_box :is_right %>
+  <% end %>
+  <%= f.submit nil %>
+<% end %>
